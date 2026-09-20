@@ -1,0 +1,25 @@
+---
+layout: default
+title: Newsletter — Destaques da Semana
+permalink: /newsletter/
+---
+<div class="section-heading">
+  <h2>Newsletter · Destaques da Semana</h2>
+</div>
+<p>Todas as edições da newsletter semanal de mercados e macroeconomia da Liga.</p>
+
+{% assign items = site.newsletter | sort: 'date' | reverse %}
+{% if items.size > 0 %}
+<div class="card-grid">
+  {% for post in items %}
+  <a class="card" href="{{ post.url | relative_url }}" style="text-decoration:none;">
+    <span class="tag">{% if post.edicao %}Edição nº{{ post.edicao }}{% else %}Newsletter{% endif %}</span>
+    <h3>{{ post.title }}</h3>
+    <span class="meta">{{ post.date | date: "%d/%m/%Y" }}</span>
+    {% if post.excerpt %}<p class="excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>{% endif %}
+  </a>
+  {% endfor %}
+</div>
+{% else %}
+<div class="empty-state">Nenhuma edição publicada ainda.</div>
+{% endif %}

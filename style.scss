@@ -1,0 +1,286 @@
+---
+---
+/* =========================================================
+   Design system — Liga de Mercado Financeiro UFPB
+   Fontes e paleta seguem a identidade já usada na newsletter
+   "Destaques da Semana" (ajuste as cores em :root se a Liga
+   tiver uma paleta oficial diferente).
+   ========================================================= */
+
+:root {
+  --color-navy: #10233f;
+  --color-navy-light: #1b3a63;
+  --color-gold: #b8912b;
+  --color-gold-light: #e4c765;
+  --color-bg: #faf8f3;
+  --color-surface: #ffffff;
+  --color-text: #1a1a1a;
+  --color-muted: #5b6472;
+  --color-border: #e4e0d6;
+
+  --font-heading: "IBM Plex Sans Condensed", Arial, sans-serif;
+  --font-body: "Source Serif 4", Georgia, serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+
+  --max-width: 960px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--color-navy);
+  line-height: 1.2;
+}
+
+a {
+  color: var(--color-navy-light);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; color: var(--color-gold); }
+
+.wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---- Header ---- */
+.site-header {
+  background: var(--color-navy);
+  border-bottom: 4px solid var(--color-gold);
+}
+.site-header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.site-branding {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.site-branding img { height: 40px; width: auto; }
+.site-title {
+  font-family: var(--font-heading);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.site-title small {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-gold-light);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.site-nav a {
+  color: #f2efe6;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  margin-left: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.site-nav a:hover { color: var(--color-gold-light); text-decoration: none; }
+
+/* ---- Hero ---- */
+.hero {
+  background: linear-gradient(180deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+  color: #fff;
+  padding: 56px 0;
+}
+.hero h1 {
+  color: #fff;
+  font-size: 2.2rem;
+  margin: 0 0 10px;
+}
+.hero p {
+  font-family: var(--font-body);
+  color: #dfe4ee;
+  max-width: 640px;
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+/* ---- Sections / cards ---- */
+main { padding: 48px 0 72px; }
+
+.section-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--color-border);
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+}
+.section-heading h2 { margin: 0; font-size: 1.4rem; }
+.section-heading a {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 22px;
+  margin-bottom: 56px;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.card .tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-gold);
+}
+.card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.card .meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+.card p.excerpt {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* ---- Post / article ---- */
+.post-header {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 20px;
+  margin-bottom: 32px;
+}
+.post-header .tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  letter-spacing: 0.06em;
+}
+.post-header h1 { margin: 8px 0 6px; font-size: 2rem; }
+.post-header .meta {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+article.post-content h2 {
+  margin-top: 2.2em;
+  font-size: 1.35rem;
+  border-left: 4px solid var(--color-gold);
+  padding-left: 12px;
+}
+article.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  margin: 1.2em 0;
+}
+article.post-content th, article.post-content td {
+  border: 1px solid var(--color-border);
+  padding: 8px 10px;
+  text-align: left;
+}
+article.post-content th { background: #f1efe7; }
+article.post-content blockquote {
+  border-left: 3px solid var(--color-navy-light);
+  margin: 1.4em 0;
+  padding: 0.2em 1em;
+  color: var(--color-muted);
+  font-style: italic;
+}
+article.post-content code { font-family: var(--font-mono); background: #f1efe7; padding: 2px 5px; border-radius: 3px; }
+
+/* ---- Member card ---- */
+.member-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 24px;
+}
+.member-card img.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-gold);
+  background: var(--color-border);
+}
+.member-card h1 { margin: 0; font-size: 1.4rem; }
+.member-card .role {
+  font-family: var(--font-mono);
+  color: var(--color-gold);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  background: var(--color-navy);
+  color: #cfd6e4;
+  padding: 32px 0;
+  margin-top: 48px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+.site-footer a { color: var(--color-gold-light); }
+.site-footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.empty-state {
+  border: 1px dashed var(--color-border);
+  border-radius: 6px;
+  padding: 24px;
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .site-header .wrapper { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .site-nav a { margin-left: 0; margin-right: 16px; }
+  .member-card { flex-direction: column; align-items: center; text-align: center; }
+}

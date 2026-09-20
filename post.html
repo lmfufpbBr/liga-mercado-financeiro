@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<article>
+  <div class="post-header">
+    <span class="tag">{{ page.section }}{% if page.edicao %} · Edição nº{{ page.edicao }}{% endif %}</span>
+    <h1>{{ page.title }}</h1>
+    {% assign mnum = page.date | date: "%-m" | plus: 0 | minus: 1 %}
+    <div class="meta">
+      {{ page.date | date: "%d" }} de {{ site.data.meses[mnum] }} de {{ page.date | date: "%Y" }}
+      {% if page.author %} · por {{ page.author }}{% else %} · por {{ site.author_default }}{% endif %}
+    </div>
+  </div>
+  <div class="post-content">
+    {{ content }}
+  </div>
+  <p style="margin-top:40px;">
+    <a href="{{ page.section_url | relative_url }}">&larr; Voltar para {{ page.section }}</a>
+  </p>
+</article>

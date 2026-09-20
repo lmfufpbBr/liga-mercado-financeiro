@@ -1,0 +1,9 @@
+<footer class="site-footer">
+  <div class="wrapper">
+    <div>&copy; {{ 'now' | date: "%Y" }} {{ site.title }} — conteúdo produzido por membros da Liga.</div>
+    <div>
+      {% if site.social.instagram %}<a href="{{ site.social.instagram }}" target="_blank" rel="noopener">Instagram</a>{% endif %}
+      {% if site.social.email %} · <a href="mailto:{{ site.social.email }}">{{ site.social.email }}</a>{% endif %}
+    </div>
+  </div>
+</footer>

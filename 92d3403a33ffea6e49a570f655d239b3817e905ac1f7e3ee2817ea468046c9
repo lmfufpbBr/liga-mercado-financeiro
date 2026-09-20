@@ -1,0 +1,85 @@
+I"5<blockquote>
+  <p><strong>Este arquivo é um EXEMPLO de formatação.</strong> Substitua os valores pelos dados reais da semana, mantendo as convenções do painel: fechamento sem ajuste; média de volume calculada sobre os 5 últimos pregões até a data de referência; performance do setor como média aritmética simples dos ativos; quando a base disponível vai só até quinta-feira, adota-se o fechamento de quinta como referência de “sexta”.</p>
+</blockquote>
+
+<h2 id="ativos-acompanhados">Ativos acompanhados</h2>
+
+<p>WEGE3, EMBJ3, RAIL3, POMO4, VAMO3, RENT3, VIVT3, TOTS3, TIMS3 — comparados à performance do Ibovespa no mesmo período.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ativo</th>
+      <th style="text-align: right">Fechamento</th>
+      <th style="text-align: right">Variação na semana</th>
+      <th style="text-align: right">Volume médio (5 pregões)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>WEGE3</td>
+      <td style="text-align: right">R$ [x,xx]</td>
+      <td style="text-align: right">[x,xx]%</td>
+      <td style="text-align: right">[xxx.xxx]</td>
+    </tr>
+    <tr>
+      <td>EMBJ3</td>
+      <td style="text-align: right">R$ [x,xx]</td>
+      <td style="text-align: right">[x,xx]%</td>
+      <td style="text-align: right">[xxx.xxx]</td>
+    </tr>
+    <tr>
+      <td>RAIL3</td>
+      <td style="text-align: right">R$ [x,xx]</td>
+      <td style="text-align: right">[x,xx]%</td>
+      <td style="text-align: right">[xxx.xxx]</td>
+    </tr>
+    <tr>
+      <td>POMO4</td>
+      <td style="text-align: right">R$ [x,xx]</td>
+      <td style="text-align: right">[x,xx]%</td>
+      <td style="text-align: right">[xxx.xxx]</td>
+    </tr>
+    <tr>
+      <td>VAMO3</td>
+      <td style="text-align: right">R$ [x,xx]</td>
+      <td style="text-align: right">[x,xx]%</td>
+      <td style="text-align: right">[xxx.xxx]</td>
+    </tr>
+    <tr>
+      <td>RENT3</td>
+      <td style="text-align: right">R$ [x,xx]</td>
+      <td style="text-align: right">[x,xx]%</td>
+      <td style="text-align: right">[xxx.xxx]</td>
+    </tr>
+    <tr>
+      <td>VIVT3</td>
+      <td style="text-align: right">R$ [x,xx]</td>
+      <td style="text-align: right">[x,xx]%</td>
+      <td style="text-align: right">[xxx.xxx]</td>
+    </tr>
+    <tr>
+      <td>TOTS3</td>
+      <td style="text-align: right">R$ [x,xx]</td>
+      <td style="text-align: right">[x,xx]%</td>
+      <td style="text-align: right">[xxx.xxx]</td>
+    </tr>
+    <tr>
+      <td>TIMS3</td>
+      <td style="text-align: right">R$ [x,xx]</td>
+      <td style="text-align: right">[x,xx]%</td>
+      <td style="text-align: right">[xxx.xxx]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Performance do setor (média simples):</strong> [x,xx]% · <strong>Ibovespa no período:</strong> [x,xx]%</p>
+
+<h2 id="leitura-da-semana">Leitura da semana</h2>
+
+<p>[Comentário sobre o que explicou o desempenho relativo do setor frente ao Ibovespa.]</p>
+
+<hr />
+
+<p><em>Fonte: relatórios diários Economatica. Material de divulgação educacional produzido pela Liga de Mercado Financeiro UFPB. Não constitui recomendação de investimento.</em></p>
+:ET

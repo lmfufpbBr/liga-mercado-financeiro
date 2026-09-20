@@ -1,0 +1,25 @@
+---
+layout: default
+title: Análise Setorial
+permalink: /analises/
+---
+<div class="section-heading">
+  <h2>Análise Setorial</h2>
+</div>
+<p>Relatórios setoriais, benchmarking de empresas e o painel semanal de acompanhamento.</p>
+
+{% assign items = site.analises | sort: 'date' | reverse %}
+{% if items.size > 0 %}
+<div class="card-grid">
+  {% for post in items %}
+  <a class="card" href="{{ post.url | relative_url }}" style="text-decoration:none;">
+    <span class="tag">{{ post.setor | default: "Análise Setorial" }}</span>
+    <h3>{{ post.title }}</h3>
+    <span class="meta">{{ post.date | date: "%d/%m/%Y" }}</span>
+    {% if post.excerpt %}<p class="excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>{% endif %}
+  </a>
+  {% endfor %}
+</div>
+{% else %}
+<div class="empty-state">Nenhuma análise publicada ainda.</div>
+{% endif %}

@@ -1,0 +1,63 @@
+---
+layout: default
+title: Início
+---
+<div class="hero" style="margin: -1px -24px 0; border-radius: 0;">
+  <div class="wrapper">
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+  </div>
+</div>
+
+{% assign newsletter_latest = site.newsletter | sort: 'date' | reverse | slice: 0, 3 %}
+{% assign analises_latest = site.analises | sort: 'date' | reverse | slice: 0, 3 %}
+
+<section>
+  <div class="section-heading">
+    <h2>Newsletter · Destaques da Semana</h2>
+    <a href="{{ '/newsletter/' | relative_url }}">Ver todas &rarr;</a>
+  </div>
+  {% if newsletter_latest.size > 0 %}
+  <div class="card-grid">
+    {% for post in newsletter_latest %}
+    <a class="card" href="{{ post.url | relative_url }}" style="text-decoration:none;">
+      <span class="tag">{% if post.edicao %}Edição nº{{ post.edicao }}{% else %}Newsletter{% endif %}</span>
+      <h3>{{ post.title }}</h3>
+      <span class="meta">{{ post.date | date: "%d/%m/%Y" }}</span>
+      {% if post.excerpt %}<p class="excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>{% endif %}
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty-state">Nenhuma edição publicada ainda. Veja o guia em <code>_newsletter/</code> para adicionar a primeira.</div>
+  {% endif %}
+</section>
+
+<section>
+  <div class="section-heading">
+    <h2>Análise Setorial</h2>
+    <a href="{{ '/analises/' | relative_url }}">Ver todas &rarr;</a>
+  </div>
+  {% if analises_latest.size > 0 %}
+  <div class="card-grid">
+    {% for post in analises_latest %}
+    <a class="card" href="{{ post.url | relative_url }}" style="text-decoration:none;">
+      <span class="tag">{{ post.setor | default: "Análise Setorial" }}</span>
+      <h3>{{ post.title }}</h3>
+      <span class="meta">{{ post.date | date: "%d/%m/%Y" }}</span>
+      {% if post.excerpt %}<p class="excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>{% endif %}
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty-state">Nenhuma análise publicada ainda. Veja o guia em <code>_analises/</code> para adicionar a primeira.</div>
+  {% endif %}
+</section>
+
+<section>
+  <div class="section-heading">
+    <h2>A Liga</h2>
+  </div>
+  <p><a href="{{ '/sobre/' | relative_url }}">Conheça a Liga de Mercado Financeiro UFPB &rarr;</a></p>
+  <p><a href="{{ '/membros/' | relative_url }}">Conheça os membros &rarr;</a></p>
+</section>

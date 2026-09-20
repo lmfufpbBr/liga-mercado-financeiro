@@ -1,0 +1,86 @@
+# =========================================================
+# Configuração do site — Blog da Liga de Mercado Financeiro UFPB
+# =========================================================
+# Edite os campos abaixo com as informações reais da Liga.
+
+title: "Liga de Mercado Financeiro UFPB"
+tagline: "Análises, newsletters e conteúdo educacional em mercado financeiro"
+description: >-
+  Blog oficial da Liga de Mercado Financeiro UFPB (Universidade Federal da Paraíba):
+  newsletter semanal "Destaques da Semana", análises setoriais, conteúdo educacional
+  e os bastidores da Liga.
+
+# URL base do site depois de publicado no GitHub Pages.
+# Se o repositório se chamar "liga-mercado-financeiro" e a org/usuário do GitHub
+# for "sua-org", normalmente fica:
+#   url: "https://sua-org.github.io"
+#   baseurl: "/liga-mercado-financeiro"
+# Se vocês configurarem um domínio próprio (CNAME), deixem baseurl vazio e
+# ajustem url para o domínio.
+url: "https://lmfufpbbr.github.io"
+baseurl: "/liga-mercado-financeiro"
+
+# Redes / contato — edite com os links reais da Liga
+social:
+  instagram: "https://instagram.com/SEU_PERFIL"
+  email: "contato@ligamercadofinanceiro.com.br"
+
+# Autoria padrão (pode ser sobrescrita em cada post com "author:" no front matter)
+author_default: "Liga de Mercado Financeiro UFPB"
+
+# -------------------------------
+# Collections (as três seções de conteúdo)
+# -------------------------------
+collections:
+  newsletter:
+    output: true
+    permalink: /newsletter/:path/
+  analises:
+    output: true
+    permalink: /analises/:path/
+  membros:
+    output: true
+    permalink: /membros/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "newsletter"
+    values:
+      layout: "post"
+      section: "Newsletter"
+      section_url: "/newsletter/"
+  - scope:
+      path: ""
+      type: "analises"
+    values:
+      layout: "post"
+      section: "Análise Setorial"
+      section_url: "/analises/"
+  - scope:
+      path: ""
+      type: "membros"
+    values:
+      layout: "membro"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# -------------------------------
+# Build
+# -------------------------------
+markdown: kramdown
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

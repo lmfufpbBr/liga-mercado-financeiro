@@ -1,0 +1,24 @@
+---
+layout: default
+title: Membros
+permalink: /membros/
+---
+<div class="section-heading">
+  <h2>Membros da Liga</h2>
+</div>
+<p>Conheça quem produz o conteúdo da Liga de Mercado Financeiro UFPB.</p>
+
+{% assign items = site.membros | sort: 'title' %}
+{% if items.size > 0 %}
+<div class="card-grid">
+  {% for m in items %}
+  <a class="card" href="{{ m.url | relative_url }}" style="text-decoration:none;">
+    <span class="tag">{{ m.cargo | default: "Membro" }}</span>
+    <h3>{{ m.title }}</h3>
+    {% if m.curso %}<span class="meta">{{ m.curso }}</span>{% endif %}
+  </a>
+  {% endfor %}
+</div>
+{% else %}
+<div class="empty-state">Nenhum perfil publicado ainda.</div>
+{% endif %}
